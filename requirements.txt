@@ -27,3 +27,6 @@ sentence-transformers
 transformers
 huggingface-hub
 ollama
+
+#V100 torch compatibility
+torch==2.5.1

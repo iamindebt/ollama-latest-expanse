@@ -22,6 +22,8 @@ RUN curl -fsSL https://ollama.com/download/ollama-linux-amd64.tar.zst \
 COPY requirements.txt /tmp/requirements.txt
 
 RUN python -m pip install --upgrade pip && \
+    pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 \
+        --index-url https://download.pytorch.org/whl/cu121 && \
     pip install -r /tmp/requirements.txt && \
     rm /tmp/requirements.txt
 
